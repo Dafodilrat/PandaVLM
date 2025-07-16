@@ -1,0 +1,13 @@
+sudo apt install ros-jazzy-moveit
+sudo apt install ros-${ROS_DISTRO}-ros-testing
+pip3 install empy
+pip3 install -U catkin_pkg
+pip3 install lark
+pip3 install pytest
+sudo apt install ros-${ROS_DISTRO}-pluginlib
+sudo apt install python3-pytest
+sudo apt install ros-$ROS_DISTRO-ros-gz-bridge
+sudo apt install libgz-sensors8-dev
+sudo apt install ros-${ROS_DISTRO}-ros-gz-sim
+sudo apt install ros-${ROS_DISTRO}-moveit-servo
+

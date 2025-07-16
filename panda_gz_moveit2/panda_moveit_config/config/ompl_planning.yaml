@@ -1,0 +1,63 @@
+planning_pipelines: ompl
+default_planning_pipeline: ompl
+
+planning_plugin: ompl_interface/OMPLPlanner
+default_planner_config: RRTConnectkConfigDefault
+
+request_adapters:
+  - default_planning_request_adapters/ResolveConstraintFrames
+  - default_planning_request_adapters/ValidateWorkspaceBounds
+  - default_planning_request_adapters/CheckStartStateBounds
+  - default_planning_request_adapters/CheckStartStateCollision
+
+response_adapters:
+  - default_planning_response_adapters/AddTimeOptimalParameterization
+  - default_planning_response_adapters/ValidateSolution
+  - default_planning_response_adapters/DisplayMotionPath
+
+start_state_max_bounds_error: 0.1
+
+planner_configs:
+  RRTConnectkConfigDefault:
+    type: geometric::RRTConnect
+    range: 0.0
+
+  # You can keep the others below or trim as needed
+  PRMkConfigDefault:
+    type: geometric::PRM
+    max_nearest_neighbors: 10
+
+  RRTstarkConfigDefault:
+    type: geometric::RRTstar
+    goal_bias: 0.05
+    delay_collision_checking: 1
+
+  TRRTkConfigDefault:
+    type: geometric::TRRT
+    goal_bias: 0.05
+    max_states_failed: 10
+    temp_change_factor: 2.0
+    min_temperature: 1.0e-9
+    init_temperature: 1.0e-5
+    frontier_threshold: 0.0
+    frontier_node_ratio: 0.1
+    k_constant: 0.0
+
+  BiTRRTkConfigDefault:
+    type: geometric::BiTRRT
+    range: 0.0
+    temp_change_factor: 0.1
+    init_temperature: 100
+    frontier_threshold: 0.0
+    frontier_node_ratio: 0.1
+    cost_threshold: 1.0e300
+
+# Assign these to planning group(s)
+arm:
+  planner_configs:
+    - RRTConnectkConfigDefault
+    - PRMkConfigDefault
+    - RRTstarkConfigDefault
+    - TRRTkConfigDefault
+    - BiTRRTkConfigDefault
+  longest_valid_segment_fraction: 0.005
