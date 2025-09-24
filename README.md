@@ -37,6 +37,7 @@ vlm-robot-arm/
 ├── pose_moveit_controller.py  # Alternate node for direct Pose targets
 ├── move_group.launch.py       # ROS 2 launch file for MoveIt & RViz setup
 └── Image_and_Video_Computing_Report.pdf  # Full project report
+```
 
 ---
 
