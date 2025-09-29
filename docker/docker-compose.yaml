@@ -1,0 +1,50 @@
+services:
+  isaac_panda:
+    build:
+      context: ../
+      dockerfile: docker/dockerfile
+    image: isaac_panda:isaacsim-4.5
+    container_name: isaac_panda_container
+    runtime: nvidia
+    network_mode: "host"
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    environment:
+      - DISPLAY=${DISPLAY}
+      - ACCEPT_EULA=Y
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - NVIDIA_VISIBLE_DEVICES=all
+      - OMNI_KIT_ALLOW_ROOT=1
+      - X11_FORWARDING_ENABLED=1
+      - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+      - LD_LIBRARY_PATH=/isaac-sim/exts/isaacsim.ros2.bridge/humble/lib:$LD_LIBRARY_PATH
+      - ROS_DOMAIN_ID=0
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix 
+      - $HOME/.Xauthority:/root/.Xauthority:rw  
+      - /home/dafodilrat/Documents/bu/RASTIC/Isaac_panda:/IsaacPanda
+      - $HOME/.nvidia-omniverse:/root/.nvidia-omniverse
+      - $HOME/.cache/warp:/root/.cache/warp
+      - $HOME/.cache/ov:/root/.cache/ov
+      - $HOME/.local/share/ov:/root/.local/share/ov  
+    entrypoint: ["/isaac-sim/isaac-sim.sh"]
+
+  ros2-humble:
+    image: osrf/ros:humble-desktop
+    network_mode: "host"
+    container_name: ros2-humble-container
+    environment:
+      - ROS_DOMAIN_ID=0
+      - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+    tty: true
+    stdin_open: true
+    entrypoint: >
+      bash -c "source /opt/ros/humble/setup.bash && exec bash"
+    # volumes:
+    #   - ./ros_ws:/ros_ws   # optional, mount your workspace

@@ -1,0 +1,17 @@
+{
+    "ros.distro": "jazzy",
+
+    "python.analysis.extraPaths": [
+        "${env:ISAACLAB_PATH}/source",      
+        "${env:ISAACSIM_PATH}/exts",      
+        "${env:ISAACSIM_PATH}/extscache",   
+        "${env:ISAACSIM_PATH}/kit/python/lib/python3.10/site-packages"
+    ],
+
+  "python.autoComplete.extraPaths": [
+        "${env:ISAACLAB_PATH}/source",        
+        "${env:ISAACSIM_PATH}/exts",          
+        "${env:ISAACSIM_PATH}/extscache",   
+        "${env:ISAACSIM_PATH}/kit/python/lib/python3.10/site-packages"
+    ]
+}
