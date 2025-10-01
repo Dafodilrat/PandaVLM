@@ -35,16 +35,16 @@ services:
       - $HOME/.local/share/ov:/root/.local/share/ov  
     entrypoint: ["/isaac-sim/isaac-sim.sh"]
 
-  ros2-humble:
-    image: osrf/ros:humble-desktop
-    network_mode: "host"
-    container_name: ros2-humble-container
-    environment:
-      - ROS_DOMAIN_ID=0
-      - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
-    tty: true
-    stdin_open: true
-    entrypoint: >
-      bash -c "source /opt/ros/humble/setup.bash && exec bash"
-    # volumes:
-    #   - ./ros_ws:/ros_ws   # optional, mount your workspace
+  # ros2-humble:
+  #   image: osrf/ros:humble-desktop
+  #   network_mode: "host"
+  #   container_name: ros2-humble-container
+  #   environment:
+  #     - ROS_DOMAIN_ID=0
+  #     - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+  #   tty: true
+  #   stdin_open: true
+  #   entrypoint: >
+  #     bash -c "source /opt/ros/humble/setup.bash && exec bash"
+  #   # volumes:
+  #   #   - ./ros_ws:/ros_ws   # optional, mount your workspace
