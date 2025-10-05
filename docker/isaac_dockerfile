@@ -3,10 +3,10 @@
 # --- Stage 1: Isaac Sim Downloader ---
 FROM alpine AS downloader
 WORKDIR /isaac-sim
-RUN apk add --no-cache wget unzip && \
-    wget -c https://download.isaacsim.omniverse.nvidia.com/isaac-sim-standalone-4.5.0-linux-x86_64.zip -O isaac-sim.zip && \
-    unzip isaac-sim.zip && \
-    rm isaac-sim.zip
+RUN apk add --no-cache wget unzip
+RUN wget -c https://download.isaacsim.omniverse.nvidia.com/isaac-sim-standalone-4.5.0-linux-x86_64.zip -O isaac-sim.zip
+RUN unzip isaac-sim.zip 
+RUN rm isaac-sim.zip
 
 # --- Stage 2: Main image ---
 FROM ros:humble-perception
@@ -16,7 +16,7 @@ ENV DOCKER_USER_HOME=/root
 # Python venv
 ENV VIRTUAL_ENV=/isaac
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
-RUN apt update && apt install -y python3-pip && pip install --upgrade pip
+RUN apt update && apt install -y python3-pip ros-humble-rviz2 && pip install --upgrade pip
 
 # Basic utilities
 RUN apt-get update && apt-get install -y \
@@ -38,13 +38,9 @@ RUN echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc && \
     echo "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp" >> /root/.bashrc &&\
     echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/isaac-sim/exts/isaacsim.ros2.bridge/humble/lib" >> /root/.bashrc
 
-COPY docker/entrypoint.sh /entrypoint.sh
+COPY docker/isaac_entrypoint.sh /isaac_entrypoint.sh
 
-RUN chmod +x /entrypoint.sh
+RUN chmod +x /isaac_entrypoint.sh
 
 # ros2 workspace setup
-RUN apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential python3-colcon-common-extensions
-
-
-
 WORKDIR /IsaacPanda
