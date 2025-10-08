@@ -1,0 +1,62 @@
+[0.029s] Invoking command in '/movit_ws/build/panda_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ws_moveit/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --build /movit_ws/build/panda_description -- -j20 -l20
+[0.097s] Invoked command in '/movit_ws/build/panda_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ws_moveit/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --build /movit_ws/build/panda_description -- -j20 -l20
+[0.111s] Invoking command in '/movit_ws/build/panda_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ws_moveit/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --install /movit_ws/build/panda_description
+[0.122s] -- Install configuration: ""
+[0.123s] -- Execute custom install script
+[0.124s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/urdf/Franka.urdf
+[0.124s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_hand_geometry_panda_hand.mtl
+[0.124s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_hand_geometry_panda_hand.obj
+[0.125s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_leftfinger_geometry_panda_leftfinger.mtl
+[0.125s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_leftfinger_geometry_panda_leftfinger.obj
+[0.125s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_link0_geometry_panda_link0.mtl
+[0.125s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_link0_geometry_panda_link0.obj
+[0.125s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_link1_geometry_panda_link1.mtl
+[0.125s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_link1_geometry_panda_link1.obj
+[0.126s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_link2_geometry_panda_link2.mtl
+[0.126s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_link2_geometry_panda_link2.obj
+[0.126s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_link3_geometry_panda_link3.mtl
+[0.126s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_link3_geometry_panda_link3.obj
+[0.126s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_link4_geometry_panda_link4.mtl
+[0.126s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_link4_geometry_panda_link4.obj
+[0.127s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_link5_geometry_panda_link5.mtl
+[0.127s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_link5_geometry_panda_link5.obj
+[0.127s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_link6_geometry_panda_link6.mtl
+[0.127s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_link6_geometry_panda_link6.obj
+[0.127s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_link7_geometry_panda_link7.mtl
+[0.127s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_link7_geometry_panda_link7.obj
+[0.127s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_rightfinger_geometry_panda_rightfinger.mtl
+[0.127s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Franka_panda_rightfinger_geometry_panda_rightfinger.obj
+[0.127s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Orbbec_Gemini2_back_cover_back_cover.mtl
+[0.127s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Orbbec_Gemini2_back_cover_back_cover.obj
+[0.127s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Orbbec_Gemini2_camera_ldm_camera_ldm.mtl
+[0.127s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Orbbec_Gemini2_camera_ldm_camera_ldm.obj
+[0.127s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Orbbec_Gemini2_camera_rgb_camera_rgb.mtl
+[0.127s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Orbbec_Gemini2_camera_rgb_camera_rgb.obj
+[0.127s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Orbbec_Gemini2_gemini2_body_gemini2_body.mtl
+[0.128s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/Orbbec_Gemini2_gemini2_body_gemini2_body.obj
+[0.128s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/camera_left.mtl
+[0.128s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/camera_left.obj
+[0.128s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/camera_right.mtl
+[0.128s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/camera_right.obj
+[0.128s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/foot_left.mtl
+[0.128s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/foot_left.obj
+[0.128s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/foot_right.mtl
+[0.128s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/foot_right.obj
+[0.128s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/front_cover_solid_solid.mtl
+[0.128s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/meshes/front_cover_solid_solid.obj
+[0.128s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/ament_index/resource_index/package_run_dependencies/panda_description
+[0.128s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/ament_index/resource_index/parent_prefix_path/panda_description
+[0.128s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/environment/ament_prefix_path.sh
+[0.128s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/environment/ament_prefix_path.dsv
+[0.129s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/environment/path.sh
+[0.129s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/environment/path.dsv
+[0.129s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/local_setup.bash
+[0.129s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/local_setup.sh
+[0.129s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/local_setup.zsh
+[0.129s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/local_setup.dsv
+[0.129s] -- Symlinking: /movit_ws/install/panda_description/share/panda_description/package.dsv
+[0.147s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/ament_index/resource_index/packages/panda_description
+[0.147s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/cmake/panda_descriptionConfig.cmake
+[0.147s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/cmake/panda_descriptionConfig-version.cmake
+[0.147s] -- Up-to-date symlink: /movit_ws/install/panda_description/share/panda_description/package.xml
+[0.150s] Invoked command in '/movit_ws/build/panda_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ws_moveit/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --install /movit_ws/build/panda_description

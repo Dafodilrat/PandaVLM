@@ -1,0 +1,1 @@
+/movit_ws/src/panda_moveit_config/launch/setup_assistant.launch.py
