@@ -8,7 +8,7 @@ services:
     container_name: isaac_panda_container
     runtime: nvidia
     # network_mode: "host"
-    # restart: unless-stopped
+    restart: unless-stopped
     tty: true
     deploy:
       resources:
@@ -56,12 +56,25 @@ services:
     runtime: nvidia
     # restart: unless-stopped
     environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - QT_QPA_PLATFORM=xcb
+      - LIBGL_ALWAYS_INDIRECT=0
+      - LIBGL_ALWAYS_SOFTWARE=0
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - NVIDIA_VISIBLE_DEVICES=all
+      - __GLX_VENDOR_LIBRARY_NAME=nvidia
       - ROS_DOMAIN_ID=0
       - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
-      - DISPLAY=${DISPLAY}
+      - XDG_RUNTIME_DIR=/tmp/runtime-root
+      # Optional stability flags
+      - MESA_GL_VERSION_OVERRIDE=3.3
+      - MESA_GLSL_VERSION_OVERRIDE=330
+
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix 
-      - $HOME/.Xauthority:/root/.Xauthority:rw 
+      - $HOME/.Xauthority:/root/.Xauthority:rw
+      - /home/dafodilrat/Documents/bu/RASTIC/Isaac_panda/movit_ws:/movit_ws 
     tty: true
     stdin_open: true
     entrypoint: ["/movit_entrypoint.sh"]
