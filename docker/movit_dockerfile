@@ -18,5 +18,4 @@ RUN echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc && \
     echo "export ROS_DISTRO=humble" >> /root/.bashrc && \
     echo "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp" >> /root/.bashrc
 
-
-
+WORKDIR /movit_ws
