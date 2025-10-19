@@ -43,4 +43,4 @@ COPY docker/isaac_entrypoint.sh /isaac_entrypoint.sh
 RUN chmod +x /isaac_entrypoint.sh
 
 # ros2 workspace setup
-WORKDIR /IsaacPanda
+WORKDIR /IsaacSLAM

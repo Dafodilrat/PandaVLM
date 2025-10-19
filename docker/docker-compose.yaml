@@ -1,11 +1,11 @@
 services:
-  isaac_panda:
+  isaac_slam:
     shm_size: 8g
     build:
       context: ../
       dockerfile: docker/isaac_dockerfile
     image: isaac_panda:isaacsim-4.5
-    container_name: isaac_panda_container
+    container_name: isaac_slam_container
     runtime: nvidia
     # network_mode: "host"
     restart: unless-stopped
